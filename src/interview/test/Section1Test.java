@@ -20,8 +20,9 @@ public class Section1Test {
         Map<String, String> maps = new HashMap<String, String>();
         maps.put("aabbccddee", "a2b2c2d2e2");
         maps.put("aaaaaaaaaa", "a10");
-        maps.put("a", "a");
-        maps.put("aaaaaaaaaab", "a10b");
+        maps.put("a", "a1");
+        maps.put("aaaaaaaaaab", "a10b1");
+        maps.put("abcdefghijklmn", "a1b1c1d1e1f1g1h1i1j1k1l1m1n1");
         maps.put("aaaaaaaaaabbbbbbbbbb", "a10b10");
         for (String key : maps.keySet()) {
             Assert.assertEquals(maps.get(key), Section1.zipString(key));

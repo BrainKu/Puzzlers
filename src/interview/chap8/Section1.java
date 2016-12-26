@@ -45,26 +45,36 @@ public class Section1 {
     }
 
 
-    public static String zipString(String input) {
-        if (input == null || input.length() == 1) return input;
+    public static String zipString(String input) { // 题目都没看清楚,到底怎么做题的.a 要变成 a1
+        if (input == null || input.isEmpty()) return input;
         char[] inputs = input.toCharArray();
         int count = 1;
-        StringBuilder sb = new StringBuilder(inputs[0] + ""); //  这里也是个坑啊
+        char last = inputs[0];
+        StringBuilder sb = new StringBuilder();
         for (int i = 1, length = inputs.length; i < length; i++) {
             if (inputs[i] == inputs[i-1]) {
                 count++;
-                if (i == length - 1) {
-                    sb.append(count);
-                }
             } else {
-                if (count != 1) { // if not 1, add count
-                    sb.append(count);
-                }
-                sb.append(inputs[i]);
+                sb.append(last);
+                sb.append(count);
+                last = inputs[i];
                 count = 1;
             }
         }
+        sb.append(last).append(count);
         return sb.toString();
+    }
+
+    public static boolean isRotateBy(String strA, String strB) {
+        if (strA == null || strB == null) return false;
+
+        return false;
+    }
+
+    public static float[] sqrt(int value, float offset) {
+        float[] result = new float[2];
+
+        return result;
     }
 
     private static String zipString0(String input) {
